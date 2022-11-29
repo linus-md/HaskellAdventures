@@ -8,7 +8,7 @@ main = do
     putStrLn (readExpr ( args !! 0))
 
 symbol :: Parser Char
-symbol = oneOf "!$%&|*+-/:<=?>@^_~#"
+symbol = oneOf "!$%&|*+-#/:<=?>@^_~#"
 
 readExpr :: String -> String
 readExpr input =  case parse symbol "lisp" input of
